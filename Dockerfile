@@ -26,6 +26,7 @@ ENV NPM_CONFIG_PREFIX=/home/node/.npm-global
 ENV PATH=$PATH:/home/node/.npm-global/bin
 
 WORKDIR /home/node/app
+RUN chmod a+w /home/node/app/*
 
 # install all dev and production dependencies
 COPY --chown=node:node package.json .
